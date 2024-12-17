@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIBENEST</title>
+  <link rel="icon" type="image/x-icon" href="img/vibenest-high-resolution-logo-transparent.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+    .header {
+      background-image: url('https://example.com/your-banner-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .header p {
+      font-size: 1.2rem;
+    }
+    .content {
+      margin-top: -50px;
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .features h3 {
+      margin-top: 20px;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body class="bg-secondary">
+    <!-- Start header -->
+    <div class="container text-light">
+        <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="img/vibenest-high-resolution-logo-transparent.png" class="bi" width="60" height="35">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 link-light">Home</a></li>
+                <li><a href="publish.html" class="nav-link px-2 link-light">Publish</a></li>
+                <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2 link-info">About</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-outline-info me-2 rounded-5 shadow" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-info rounded-5 shadow" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">Sign-up</button>
+            </div>
+        </header>
+    </div>
+    <!-- End header -->
+
+  <!-- About Us Section -->
+  <section id="about-us" class="container opacity-75 content mt-5">
+    <h2 class="text-center">Hello, Adventurers!</h2>
+    <p>Have you ever wanted to explore Sri Lanka's beautiful destinations like Nuwara Eliya but felt it would be boring and too expensive to go alone? Well, welcome to <strong>VIBENEST</strong>, where we transform your solo trips into unforgettable experiences with new friends, new vibes, and fresh opportunities!</p>
+    
+    <h3>What We Offer</h3>
+    <p>At VIBENEST, we’re all about community and creativity. Instead of traveling solo, why not join exciting trips with other like-minded people? You get to meet strangers, form new friendships, and enjoy shared experiences that turn ordinary trips into extraordinary adventures!</p>
+    <p>Not only that, you have the chance to grow a network, build a community, and even become an <strong>event manager</strong>. Start small by joining events, and step by step, learn how to organize them yourself.</p>
+    
+    <!-- Key Features Section -->
+    <div class="features">
+      <h3>Key Features of Our Site</h3>
+      <ul class="list-group">
+        <li class="list-group-item"><strong>Event Dashboard</strong> – As soon as you land on VIBENEST, you’ll see a dashboard of all the upcoming events that you can join. With just a few clicks, you're in!</li>
+        <li class="list-group-item"><strong>Event Details</strong> – Dive into the specifics of any event on our site. You’ll get all the information you need, from the organizer’s details and ratings to reviews of past events they’ve managed.</li>
+        <li class="list-group-item"><strong>Historical Event Photos & Comments</strong> – If this event has taken place before, you can check out photos from the past and see how much fun others had. Plus, you can join the conversation in the comments section to ask questions or share your excitement.</li>
+      </ul>
+    </div>
+
+    <!-- Why We Do This Section -->
+    <div class="mt-5">
+      <h3>Why We Do This</h3>
+      <p>VIBENEST is about more than just travel. It’s about building connections, learning, and evolving. Whether you’re looking for companionship on your next trip or you want to grow your creative event management skills, VIBENEST is the platform that helps you do both – all while exploring Sri Lanka.</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="#" class="btn btn-outline-success btn-lg rounded-5" data-bs-toggle="modal" data-bs-target="#signupModal">Join VIBENEST Today!</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <div class="footer mt-5">
+    <p>© 2024 VIBENEST. All Rights Reserved.</p>
+  </div>
+
+  <!-- Start Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="card rounded-4 bg-secondary text-white">
+                        <div class="card-body text-center">
+
+                            <div class="pb-5 px-5 pt-4">
+                                <!-- Alert box -->
+                                <div id="loginAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                    <strong>Success!</strong> You have logged in successfully.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <h2 class="fw-bold mb-3 text-uppercase">Login</h2>
+                                <p class="text-white-50 mb-3">Please enter your login and password!</p>
+
+                                <div data-mdb-input-init class="form-outline mb-3">
+                                    <input required type="email" id="LoginUsername" placeholder="" class="form-control rounded-5" />
+                                    <label for="email">Email</label>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-3">
+                                    <input required type="password" id="LoginPassword" class="form-control rounded-5" />
+                                    <label for="Password">Password</label>
+                                </div>
+
+                                <p class="small"><a class="text-white-50 mb-5" href="#!">Forgot password?</a></p>
+
+                                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-info rounded-5 px-5 mb-3" type="submit" onclick="loginUser()" id="loginButton">Login</button>
+
+                                <div class="d-flex justify-content-center text-center mb-3">
+                                    <a href="#!" class="text-white"><i class="fbi bi-facebook"></i></a>
+                                    <a href="#!" class="text-white"><i class="bi bi-twitter-x mx-4 px-2"></i></a>
+                                    <a href="#!" class="text-white"><i class="bi bi-google"></i></a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p class="mb-3">Don't have an account? <a href="#!" class="text-white-50 fw-bold"
+                                        data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Login Modal -->
+
+<!-- Start Sign-up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12">
+                    <div class="card rounded-4 bg-secondary text-white">
+                        <div class="card-body text-center">
+                            <h3 class="mt-3 pb-md-0 mb-md-5">Registration Form</h3>
+                            <form class="form">
+
+                                <div class="row px-2">
+                                    <div class="col-md-6 mb-3">
+
+                                        <div class="form">
+                                            <input required type="text" id="firstName" placeholder="First Name" class="form-control rounded-5" />
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+
+                                        <div data-mdb-input-init class="form">
+                                            <input required type="text" id="lastName" placeholder="Last Name" class="form-control rounded-5" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row px-2">
+                                    <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                        <div data-mdb-input-init class="form-outline datepicker w-100">
+                                            <input required type="date" class="form-control rounded-5"
+                                                id="birthday" placeholder="Birthday"/>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input required type="tel" id="password"
+                                                class="form-control rounded-5" placeholder="Password" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row px-2">
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input required type="email" id="email" class="form-control rounded-5" placeholder="Email" />
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div data-mdb-input-init class="form-outline">
+                                            <input required type="tel" id="contact"
+                                                class="form-control rounded-5" placeholder="Phone Number" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 pb-4">
+                                    <input data-mdb-ripple-init class="btn btn-outline-info" type="submit" value="Submit" onclick="registerUser()"/>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sign-up Modal -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VibeNest</title>
+    <link rel="icon" type="image/x-icon" href="img/vibenest-high-resolution-logo-transparent.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+    <!-- Start header -->
+    <div class="container">
+        <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom border-dark mb-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="img/vibenest-high-resolution-logo-transparent.png" class="bi" width="60" height="35">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-info">Home</a></li>
+                <li><a href="publish.html" class="nav-link px-2 link-dark">Publish</a></li>
+                <li><a href="FAQs.html" class="nav-link px-2 link-dark">FAQs</a></li>
+                <li><a href="about-us.html" class="nav-link px-2 link-dark">About</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+                <button type="button" class="btn btn-outline-info me-2 rounded-5 shadow" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-info rounded-5 shadow" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">Sign-up</button>
+            </div>
+        </header>
+    </div>
+    <!-- End header -->
+
+    <!-- Start carousel -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleLight" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/jakob-dalbjorn-cuKJre3nyYc-unsplash.jpg" class="d-block w-100 opacity-75">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h3>LET'S LIVE WITH VIBES</h3>
+                    <p>Explore with the right people, follow your vibe, and join a community where new friends are
+                        waiting for you.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg" class="d-block w-100 opacity-75">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h3>Crafting Events That Inspire</h3>
+                    <p>Our team specializes in creating personalized events that reflect your style and vision. From
+                        concept to execution, we ensure every detail is meticulously planned for an inspiring and
+                        flawless experience.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/rachel-coyne-U7HLzMO4SIY-unsplash.jpg" class="d-block w-100 opacity-75">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h3>Seamless Planning, Unforgettable Experiences</h3>
+                    <p>We design experiences that leave a lasting impression. Whether it's an intimate gathering or a
+                        large-scale event, our team ensures everything is perfectly executed, making your event
+                        truly unforgettable.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End carousel -->
+
+    <!-- Start Searchbar -->
+    <div class="container-fluid px-5 py-4 col-md-8">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 border-0 rounded-5 px-4 shadow" type="search" placeholder="Search Category"
+                aria-label="Search">
+            <button class="btn btn-outline-info rounded-5 shadow" type="submit">Search</button>
+        </form>
+    </div>
+    <!-- End Searchbar -->
+
+    <!-- Start Cart Pannel -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 px-4" id="post-container">
+
+    </div>
+    <!-- End Cart Pannel -->
+
+
+    <!-- Start Pagination -->
+    <nav>
+        <ul class="pagination mt-4 justify-content-center">
+            <li class="page-item"><a class="page-link border-info text-info disabled" href="#">Previous</a>
+            </li>
+            <li class="page-item" aria-current="page"><a class="page-link bg-info border-info text-secondary"
+                    href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link border-info text-info" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link border-info text-info" href="#">3</a>
+            </li>
+            <li class="page-item"><a class="page-link border-info text-info" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Pagination -->
+
+    <!-- Start Footer -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-info opacity-50">&copy; 2024 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/22C3E6/instagram-new.png"
+                            alt="instagram-new" />
+                    </a></li>
+                <li class="ms-3"><a class="text-muted" href="#">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/22C3E6/twitterx--v1.png"
+                            alt="twitterx--v1" />
+                    </a></li>
+                <li class="ms-3"><a class="text-muted" href="#">
+                        <img width="28" height="28" src="https://img.icons8.com/ios-filled/50/22C3E6/facebook-new.png"
+                            alt="facebook-new" />
+                    </a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Start Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div class="card rounded-4 bg-secondary text-white">
+                            <div class="card-body text-center">
+
+                                <div class="pb-5 px-5 pt-4">
+                                    <!-- Alert box -->
+                                    <div id="loginAlert" class="alert alert-success alert-dismissible fade show d-none"
+                                        role="alert">
+                                        <strong>Success!</strong> You have logged in successfully.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <h2 class="fw-bold mb-3 text-uppercase">Login</h2>
+                                    <p class="text-white-50 mb-3">Please enter your login and password!</p>
+
+                                    <div data-mdb-input-init class="form-outline mb-3">
+                                        <input required type="email" id="LoginUsername" placeholder=""
+                                            class="form-control rounded-5" />
+                                        <label for="email">Email</label>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-3">
+                                        <input required type="password" id="LoginPassword"
+                                            class="form-control rounded-5" />
+                                        <label for="Password">Password</label>
+                                    </div>
+
+                                    <p class="small"><a class="text-white-50 mb-5" href="#!">Forgot password?</a></p>
+
+                                    <button data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-outline-info rounded-5 px-5 mb-3" type="submit"
+                                        onclick="loginUser()" id="loginButton">Login</button>
+
+                                    <div class="d-flex justify-content-center text-center mb-3">
+                                        <a href="#!" class="text-white"><i class="fbi bi-facebook"></i></a>
+                                        <a href="#!" class="text-white"><i class="bi bi-twitter-x mx-4 px-2"></i></a>
+                                        <a href="#!" class="text-white"><i class="bi bi-google"></i></a>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="mb-3">Don't have an account? <a href="#!" class="text-white-50 fw-bold"
+                                            data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <!-- End Login Modal -->
+
+    <!-- Start Sign-up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div class="card rounded-4 bg-secondary text-white">
+                            <div class="card-body text-center">
+                                <h3 class="mt-3 pb-md-0 mb-md-5">Registration Form</h3>
+                                <form class="form">
+
+                                    <div class="row px-2">
+                                        <div class="col-md-6 mb-3">
+
+                                            <div class="form">
+                                                <input required type="text" id="firstName" placeholder="First Name"
+                                                    class="form-control rounded-5" />
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+
+                                            <div data-mdb-input-init class="form">
+                                                <input required type="text" id="lastName" placeholder="Last Name"
+                                                    class="form-control rounded-5" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row px-2">
+                                        <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                            <div data-mdb-input-init class="form-outline datepicker w-100">
+                                                <input required type="date" class="form-control rounded-5" id="birthday"
+                                                    placeholder="Birthday" />
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input required type="tel" id="password" class="form-control rounded-5"
+                                                    placeholder="Password" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row px-2">
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input required type="email" id="email" class="form-control rounded-5"
+                                                    placeholder="Email" />
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input required type="tel" id="contact" class="form-control rounded-5"
+                                                    placeholder="Phone Number" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3 pb-4">
+                                        <input data-mdb-ripple-init class="btn btn-outline-info" type="submit"
+                                            value="Submit" onclick="registerUser()" />
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sign-up Modal -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
